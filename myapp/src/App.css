@@ -1,17 +1,10 @@
 .App {
   text-align: center;
+  background-color: #FEFAD7;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -24,21 +17,21 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 h1{
   font-size: 3rem;
   color: #61dafb;
+}
+.mainLogo{
+  background-image: url("./images/kedron.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-color: #282c34;
+  min-height: 42vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .pattern{
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
@@ -51,3 +44,35 @@ h1{
   align-items: center;
   justify-content: center;
 }
+
+/* h1 { color: #CEF0D4; font-family: 'Rouge Script', cursive; font-size: 60px; font-weight: normal; line-height: 48px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
+
+
+h2 { color: #a7e8f8; font-family: 'Julius Sans One', sans-serif; font-size: 22px; font-weight: bold; line-height: 32px; margin: 0 0 24px; text-shadow: 1px 1px 1px #082b34; }
+
+
+p { color: #FFFFFF; font-family: 'Carme', sans-serif; font-size: 16px; line-height: 24px; margin: 0 0 24px; }
+
+
+a { color: #CEF0D4; text-decoration: underline; }
+
+
+a:hover { color: #a7e8f8; text-decoration: underline; } */
+
+h1 { color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0px;  padding-top: 18px; padding-bottom: 18px;}
+
+
+h2 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+
+
+.subheader { font-size: 26px; font-weight: 300; color: #ffcc66; margin: 0 0 24px; }
+
+
+p { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }
+
+
+a { color: #ff9900; background: #fff4a3; text-decoration: none; }
+
+
+a:hover { color: #ffcc66 }
+
