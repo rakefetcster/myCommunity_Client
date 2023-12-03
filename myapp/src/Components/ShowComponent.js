@@ -5,10 +5,15 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import '../App.css';
 import UserPageComponent from './UserPageComponent';
+import DetailsBuisnessComponent from './DetailsBuisnessComponent';
 const ShowComponent=() =>{
+    const [bId,setBId] = useState('');
+    
 
     const mainLogo = () => {
-      window.location.replace('http://www.kidron.org.il/');
+      setBId(1);
+      <DetailsBuisnessComponent/>
+      //window.location.replace('http://www.kidron.org.il/');
     }
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -32,9 +37,6 @@ const ShowComponent=() =>{
             <div className="pattern">2
               </div>
             
-           
-
-
            </item>
             </Grid>
             <Grid item xs={3} sm={6} md={4} >
