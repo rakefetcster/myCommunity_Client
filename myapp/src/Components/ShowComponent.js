@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import '../App.css';
 import UserPageComponent from './UserPageComponent';
 import DetailsBuisnessComponent from './DetailsBuisnessComponent';
+import { useState } from 'react';
 const ShowComponent=() =>{
     const [bId,setBId] = useState('');
     

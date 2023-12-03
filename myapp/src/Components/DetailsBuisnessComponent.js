@@ -1,12 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import '../App.css';
 import axios from 'axios';
-import { useState } from 'react';
 import {getById} from '../Utils/utils';
+const userUrl='';
 
 
 const DetailsBuisnessComponent=(props) =>{
   const [buisness,setBuisness] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => { 
         const {data} = getById(userUrl,props.id);
