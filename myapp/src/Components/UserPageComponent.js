@@ -15,7 +15,6 @@ const UserPageComponent=() =>{
   
 return(
   <div className="">
-  <h2>Your place </h2>
     <Link to="/login" onClick={showPageFunc}>Login</Link><br />
     <Link to="/about" onClick={showPageFunc}>About</Link><br />
     <Link to="/singin" onClick={showPageFunc}>SingIn</Link><br />

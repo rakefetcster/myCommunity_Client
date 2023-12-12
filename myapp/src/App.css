@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #FEFAD7;
+  background-color: #F8E9D6;
   
 }
 
@@ -22,16 +22,41 @@ h1{
   font-size: 3rem;
   color: #61dafb;
 }
+.myCommunityLogo{
+  background-image: url("./images/my_community_logo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 13vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 265px
+}
+.squreOpen{
+  display: flex;
+  flex-direction: row;
+}
 .mainLogo{
   background-image: url("./images/kedron.jpg");
   background-repeat: repeat;
   background-size: 100%;
   background-color: #282c34;
   min-height: 42vh;
+  justify-content: flex-start;
+}
+ div.menu{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: right;
+  width: 100%;
+  align-items:baseline;
+
+} 
+.menuLink{
+  padding-right:18px;
+  color: #B2B445;
+  text-decoration: none;
+  font-size: 17px;
 }
 .pattern{
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
@@ -70,14 +95,16 @@ h2 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px
 
 p { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }
 
-
-a { color: #ff9900; background: #fff4a3; text-decoration: none; }
-
-
-a:hover { color: #ffcc66 }
+a:hover { color: #3D3E3D }
 
 .Buissness_card{
   background-color: #FEFAD7;
   border: 1px solid #7c795d;
   width: 70%;
+}
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+  background-color: #FEFAD7;
+  color: #7c795d;
+  border: none;
 }
