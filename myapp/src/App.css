@@ -5,7 +5,6 @@
 }
 
 
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -31,6 +30,42 @@ h1{
   flex-direction: row;
   justify-content: left;
   width: 265px
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  background-color: #F8E9D6;
+  width: 500px;
+  border: 2px solid #7C795D;
+  margin: 20px;
+  padding: 57px;
+}
+.form1{
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  margin-left: 26%;
+}
+
+.myCommunityLogin{
+  display: flex;
+  background-image: url("./images/login.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* min-height: 13vh; */
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 400px;
+  border: 2px solid #7C795D;
+  margin: 20px;
+  padding: 57px;
+}
+.fullForm{
+  display: flex;
+  flex-direction: row;
+  height: 380px;
+  margin-top: 35px;
 }
 .squreOpen{
   display: flex;
@@ -107,4 +142,9 @@ a:hover { color: #3D3E3D }
   background-color: #FEFAD7;
   color: #7c795d;
   border: none;
+}
+form{    display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 65%;
 }

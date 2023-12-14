@@ -11,11 +11,10 @@ import { Routes,Route,Link } from 'react-router-dom';
 import LoginCompanent from './LogInCompanent';
 import AboutCompanent from './AboutComponent';
 import SingInCompanent from './SingInComponent';
-const ShowComponent=() =>{
+const ShowComponent=(props) =>{
     const [bId,setBId] = useState('');
-    const [showPage,setshowPage] = useState(false);
     const showPageFunc=() => {
-      setshowPage(!showPage);
+      props.callback({showPage:!props.showPage})
     }
     const mainLogo = () => {
       setBId(1);

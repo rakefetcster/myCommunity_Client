@@ -2,6 +2,10 @@ import '../App.css';
 import {postItem} from '../Utils/utils';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Routes,Route,Link } from 'react-router-dom';
+import ShowComponent from './ShowComponent'
+import AboutCompanent from './AboutComponent';
+import SingInCompanent from './SingInComponent';
 const userUrl = 'http://localhost:5000/user';
 
 const LoginCompanent=() =>{
@@ -22,20 +26,41 @@ const LoginCompanent=() =>{
   }
   return(
   <div>
-  <h1> My Commuinity - Log In Page  </h1>
+  <div className='squreOpen'>
+  <div className='myCommunityLogo'></div>
+  <div className='menu'>
+    <Link className="menuLink" to="/" >Back</Link>
+    <Link className="menuLink" to="/singin" >SingIn</Link>
+    <Link className="menuLink" to="/about" >About</Link>
+    <Routes >
+          <Route path="/" element={<ShowComponent />} />
+          <Route path="/about" element={<AboutCompanent />} />
+          <Route path="/singin" element={<SingInCompanent />} />
+        </Routes>
+</div>
+</div>
+<div className='fullForm'>
+<div className='form'>
+
+<h2>Hello User - Sing In  </h2>
+  <div className='form1'>
   <form onSubmit={handleSubmit}>
-    <label>
-      Email:
+    
+      <label>Email:</label>
       <input type="text" name="email" onChange={(e) => setEmail(e.target.value)} />
-    </label>
+   
     <br />
-    <label>
-      Password:
+    <label>Password:</label>
       <input type="text" name="password" onChange={(e) => setPassword(e.target.value)} />
-    </label>
+    
     <br />
     <input type="submit" value="Login" />
   </form>
+  </div>
+  
+  </div>
+  <div className='myCommunityLogin' > </div>
+    </div>
     </div>
     )
 }
