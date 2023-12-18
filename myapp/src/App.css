@@ -84,7 +84,7 @@ h1{
   flex-direction: row;
   justify-content: right;
   width: 100%;
-  align-items:baseline;
+  align-items:center;
 
 } 
 .menuLink{

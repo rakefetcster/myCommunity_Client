@@ -2,13 +2,10 @@ import '../App.css';
 import {postItem} from '../Utils/utils';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Routes,Route,Link } from 'react-router-dom';
-import ShowComponent from './ShowComponent'
-import AboutCompanent from './AboutComponent';
-import SingInCompanent from './SingInComponent';
+import { Link } from 'react-router-dom';
 const userUrl = 'http://localhost:5000/user';
 
-const LoginCompanent=() =>{
+const LoginCompanent=(props) =>{
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
   const navigate = useNavigate();
@@ -24,19 +21,16 @@ const LoginCompanent=() =>{
             navigate('/HomeComponent ');
     // }
   }
+  const showPageFunc=()=>{
+    props.callback(true);
+  }
   return(
   <div>
   <div className='squreOpen'>
   <div className='myCommunityLogo'></div>
   <div className='menu'>
-    <Link className="menuLink" to="/" >Back</Link>
-    <Link className="menuLink" to="/singin" >SingIn</Link>
-    <Link className="menuLink" to="/about" >About</Link>
-    <Routes >
-          <Route path="/" element={<ShowComponent />} />
-          <Route path="/about" element={<AboutCompanent />} />
-          <Route path="/singin" element={<SingInCompanent />} />
-        </Routes>
+    <Link className="menuLink" to="/" onClick={showPageFunc}>Back Home</Link>
+    
 </div>
 </div>
 <div className='fullForm'>
