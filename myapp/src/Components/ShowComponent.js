@@ -6,31 +6,12 @@ import Grid from '@mui/material/Grid';
 import '../App.css';
 import DetailsBuisnessComponent from './DetailsBuisnessComponent';
 import { useState } from 'react';
-import {Link } from 'react-router-dom';
-import LoginCompanent from './LogInCompanent';
-import AboutCompanent from './AboutComponent';
-import SingInCompanent from './SingInComponent';
-
+import MenuComponent from './MenuComponent';
 const ShowComponent=(props) =>{
     const [bId,setBId] = useState('');
     
-    const mainData=(data)=>{
-      const thisArray = [];
-        thisArray.push(data, '');
-        props.callback(thisArray);
-    }
-    const pageArray = [<LoginCompanent callback={mainData}/>,<SingInCompanent callback={mainData}/>,<AboutCompanent callback={mainData}/>];
-    const showPageFunc=(val) => {
-      const thisArray = [];
-      if(val==='login'){
-        thisArray.push(!props.main, pageArray[0] );
-      } else if(val==='singin'){        
-        thisArray.push(!props.main, pageArray[1] );
-      } else if(val==='about'){
-        thisArray.push(!props.main, pageArray[2] );
-      } 
-      props.callback(thisArray);
-    }
+    
+    
     const mainLogo = () => {
       setBId(1);
       <DetailsBuisnessComponent/>
@@ -43,20 +24,13 @@ const ShowComponent=(props) =>{
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
+  const getDataFromMenu=(menuData)=>{
+    props.callback(menuData);
+  }
   return (
   <div>
-    
-    
-<br />
-<div className='squreOpen'>
-<div className='myCommunityLogo'></div>
-<div className='menu'>
-<Link className="menuLink" to="/login" onClick={() => showPageFunc('login')}>Login</Link>
-<Link className="menuLink" to="/singin" onClick={() => showPageFunc('singin')}>SingIn</Link>
-<Link className="menuLink" to="/about"  onClick={() => showPageFunc('about')}>About</Link>
-
-</div>
-</div>
+    <MenuComponent callback={getDataFromMenu}/>
+    <br/>
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         
