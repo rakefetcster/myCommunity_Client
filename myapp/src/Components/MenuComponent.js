@@ -5,21 +5,23 @@ import SingUpCompanent from './SingUpComponent';
 import {Link } from 'react-router-dom';
 
 const MenuComponent=(props) =>{
-   const mainData=(data)=>{
-    const thisArray = [];
-      thisArray.push(data, '');
-      props.callback(thisArray);
-
+  const logoutFunc=()=>{
+    sessionStorage['nameLogin'] = '';
+    props.callback({"logout":true});
+  }
+  const mainData=(data)=>{
+    props.callback(data);
    }
   const pageArray = [<LoginCompanent callback={mainData}/>,<SingUpCompanent callback={mainData}/>,<AboutCompanent callback={mainData}/>];
-    const showPageFunc=(val) => {
+    
+  const showPageFunc=(val) => {
       const thisArray = [];
       if(val==='login'){
-        thisArray.push(false, pageArray[0] );
+        props.callback({"goToPage":pageArray[0]});
       } else if(val==='singup'){        
-        thisArray.push(false, pageArray[1] );
+        props.callback({"goToPage":pageArray[1]});
       } else if(val==='about'){
-        thisArray.push(false, pageArray[2] );
+        props.callback({"goToPage":pageArray[2]});
       } 
       props.callback(thisArray);
     }
@@ -27,13 +29,27 @@ const MenuComponent=(props) =>{
 return(
 <div className='squreOpen'>
 <div className='myCommunityLogo'></div>
+
 <div className='menu'>
-<Link className="menuLink" to="/login" onClick={() => showPageFunc('login')}>LogIn</Link>
-<Link className="menuLink" to="/singup" onClick={() => showPageFunc('singup')}>SingUp</Link>
-<Link className="menuLink" to="/about"  onClick={() => showPageFunc('about')}>About</Link>
+
+{props.isName? 
+  <div>
+  <Link className="menuLink" to="/login" onClick={() => showPageFunc('login')}>LogIn</Link>
+        <Link className="menuLink" to="/singup" onClick={() => showPageFunc('singup')}>SingUp</Link>
+        <Link className="menuLink" to="/about"  onClick={() => showPageFunc('about')}>About</Link>
+        </div>
+        :
+        <div className='connect'>
+        <p className="menuLink" > Hello {sessionStorage['nameLogin']}</p>
+        <Link className="menuLink" to="/" onClick={() => logoutFunc()}>LogOut</Link>
+        <Link className="menuLink" to="/about"  onClick={() => showPageFunc('about')}>About</Link>
+        </div>
+}
+  </div>
 
   </div>
-</div>
+
+
 )
 }
 

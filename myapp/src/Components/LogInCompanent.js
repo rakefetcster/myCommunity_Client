@@ -17,13 +17,13 @@ const LoginCompanent=(props) =>{
     if(data[0].hasOwnProperty("Error")){
       alert('Email or password are incorrect');
     } else{
-      sessionStorage['nameLogin'] = email;
+      sessionStorage['nameLogin'] = data[0]["appName"];
       showPageFunc();
       navigate("/");
     }
   }
   const showPageFunc=()=>{
-    props.callback(true);
+    props.callback({"logIn":true,"main":true,"isName":false});
   }
   return(
   <div>
@@ -40,7 +40,7 @@ const LoginCompanent=(props) =>{
 <h2>Hello User - LogIn  </h2>
   <div className='form1'>
   <form onSubmit={handleSubmit}>
-    
+  
       <label>Email:</label>
       <input type="text" name="email" onChange={(e) => setEmail(e.target.value)} />
    

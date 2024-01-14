@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const userUrl = 'http://localhost:5000/user';
 
 const SingUpCompanent=(props) =>{
+  const [appName,setAppName] = useState('');
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
   const navigate = useNavigate();
@@ -27,19 +28,21 @@ const SingUpCompanent=(props) =>{
       alert('Password must not contain spaces');
       return;
     }
-    let singInObj = {email:email,password:password,byKey:'signUp'}
+    let singInObj = {appName:appName,email:email,password:password,byKey:'signUp'}
     const {data} = await postItem(userUrl,singInObj);
-    console.log(data[0]);
-    if(data[0].hasOwnProperty("Error")){
+    if(data[0] === undefined){
+      alert('Problem to save data');
+    }
+    else if(data[0].hasOwnProperty("Error")){
       alert('Email or password are incorrect');
     } else{
-      sessionStorage['nameLogin'] = email;
+      sessionStorage['nameLogin'] = appName;
       showPageFunc();
       navigate("/");
   }
 }
   const showPageFunc=()=>{
-    props.callback(true);
+    props.callback({"signUp":true,"main":true,"isName":false});
   }
   return(
   <div>
@@ -53,10 +56,13 @@ const SingUpCompanent=(props) =>{
 <div className='fullForm'>
 <div className='form'>
 
-<h2>Hello User - SignIn</h2>
+<h2>Hello User - SignUp</h2>
   <div className='form1'>
   <form onSubmit={handleSubmit}>
-    
+  <label>Name:</label>
+  <input type="text" name="appname" onChange={(e) => setAppName(e.target.value)} />
+
+<br />
       <label>Email:</label>
       <input type="text" name="email" onChange={(e) => setEmail(e.target.value)} />
    
@@ -65,7 +71,7 @@ const SingUpCompanent=(props) =>{
       <input type="text" name="password" onChange={(e) => setPassword(e.target.value)} />
     
     <br />
-    <input type="submit" value="SingIn" />
+    <input type="submit" value="SingUp" />
   </form>
   </div>
   

@@ -4,18 +4,34 @@ import ShowCompanent from './Components/ShowComponent';
 const App=() =>{
   const [main,setMain] = useState(true);
   const [thisPage,setThisPage] = useState('');
- 
+  const [isName,setIsName] = useState(false);
+
+  
   const getDataFromChild=(chaildValue)=>{
-    setMain(chaildValue[0]);
-    setThisPage(chaildValue[1]);
-    console.log(main);
-    console.log(thisPage);
+    if (chaildValue !=[]){
+      if(chaildValue.hasOwnProperty("logIn") || chaildValue.hasOwnProperty("signUp")){
+        setMain(chaildValue["main"]);
+        setIsName(chaildValue["isName"]);
+        setThisPage('');
+      }
+      else if(chaildValue.hasOwnProperty("logout")){
+        setMain(true);
+        setIsName(true);
+        setThisPage('');
+      }
+      else if(chaildValue.hasOwnProperty("goToPage")){
+        setThisPage(chaildValue["goToPage"]);
+        setMain(false);
+        setIsName(false);
+      }
+    }
+    
   }
   
    return (
     <div className="App">
     
-    {main?<ShowCompanent callback={getDataFromChild}  main={main}/>:thisPage}
+    {main?<ShowCompanent callback={getDataFromChild} isName={isName} main={main}/>:thisPage}
     </div>
   );
 }

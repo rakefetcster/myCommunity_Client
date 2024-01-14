@@ -10,8 +10,6 @@ import MenuComponent from './MenuComponent';
 const ShowComponent=(props) =>{
     const [bId,setBId] = useState('');
     
-    
-    
     const mainLogo = () => {
       setBId(1);
       <DetailsBuisnessComponent/>
@@ -29,7 +27,7 @@ const ShowComponent=(props) =>{
   }
   return (
   <div>
-    <MenuComponent callback={getDataFromMenu}/>
+    <MenuComponent callback={getDataFromMenu} isName={props.isName}/>
     <br/>
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
