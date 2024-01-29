@@ -2,11 +2,12 @@ import '../App.css';
 import LoginCompanent from './LogInCompanent';
 import AboutCompanent from './AboutComponent';
 import SingUpCompanent from './SingUpComponent';
-import {Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const MenuComponent=(props) =>{
   const logoutFunc=()=>{
     sessionStorage['nameLogin'] = '';
+    sessionStorage['token'] = '';
     props.callback({"logout":true});
   }
   const mainData=(data)=>{

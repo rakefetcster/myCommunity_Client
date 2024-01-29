@@ -30,6 +30,7 @@ const SingUpCompanent=(props) =>{
     }
     let singInObj = {appName:appName,email:email,password:password,byKey:'signUp'}
     const {data} = await postItem(userUrl,singInObj);
+    sessionStorage["token"] = data.token;
     if(data[0] === undefined){
       alert('Problem to save data');
     }

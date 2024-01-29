@@ -3,7 +3,7 @@ import {postItem} from '../Utils/utils';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-const userUrl = 'http://localhost:5000/user';
+const userUrl = 'http://localhost:5000/auth/login';
 
 const LoginCompanent=(props) =>{
   const [email,setEmail] = useState('');
@@ -12,12 +12,15 @@ const LoginCompanent=(props) =>{
   
   const handleSubmit = async(e) => {
     e.preventDefault();
-    let loginObj = {email:email,password:password,byKey:'logIn'}
+    let loginObj = {username:email,password:password,byKey:'logIn'}
     const {data} = await postItem(userUrl,loginObj);
-    if(data[0].hasOwnProperty("Error")){
+    console.log(data);
+    console.log(typeof data);
+    if(Object.keys(data).includes("Error")){
       alert('Email or password are incorrect');
     } else{
-      sessionStorage['nameLogin'] = data[0]["appName"];
+      sessionStorage["token"] = data.token;
+      sessionStorage['nameLogin'] = data["appName"];
       showPageFunc();
       navigate("/");
     }
