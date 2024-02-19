@@ -29,7 +29,7 @@ const MenuComponent=(props) =>{
     
 return(
 <div className='squreOpen'>
-<div className='myCommunityLogo'></div>
+
 
 <div className='menu'>
 
@@ -47,7 +47,10 @@ return(
         </div>
 }
   </div>
-
+  <div className='myCommunityLogo'>
+  
+  
+  </div>
   </div>
 
 

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #F8E9D6;
+  background-color: #FFF;
 }
 
 
@@ -21,7 +21,7 @@ h1{
   color: #61dafb;
 }
 .myCommunityLogo{
-  background-image: url("./images/my_community_logo.jpg");
+  background-image: url("./images/my_community_logo_new.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 13vh;
@@ -77,6 +77,7 @@ h1{
 .squreOpen{
   display: flex;
   flex-direction: row;
+  height: 200px;
 }
 .mainLogo{
   background-image: url("./images/kedron.jpg");
@@ -89,16 +90,19 @@ h1{
  div.menu{
   display: flex;
   flex-direction: row;
-  justify-content: right;
-  width: 100%;
-  align-items:center;
+  justify-content: left;
+  width: 27%;
+  align-items: baseline;
+  margin-top: 57px;
+  margin-left: 173px;
 
 } 
 .menuLink{
   padding-right:18px;
-  color: #B2B445;
+  color: #5e718b;
   text-decoration: none;
   font-size: 17px;
+  font-family: serif;
 }
 .pattern{
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
@@ -112,19 +116,23 @@ h1{
   justify-content: center;
 }
 
-/* h1 { color: #CEF0D4; font-family: 'Rouge Script', cursive; font-size: 60px; font-weight: normal; line-height: 48px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
+h1 { color: #CEF0D4; font-family: 'Rouge Script', cursive; font-size: 60px; font-weight: normal; line-height: 48px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
 
 
 h2 { color: #a7e8f8; font-family: 'Julius Sans One', sans-serif; font-size: 22px; font-weight: bold; line-height: 32px; margin: 0 0 24px; text-shadow: 1px 1px 1px #082b34; }
 
 
-p { color: #FFFFFF; font-family: 'Carme', sans-serif; font-size: 16px; line-height: 24px; margin: 0 0 24px; }
-
-
+p { 
+  color: #ffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 21px;
+  line-height: 32px;
+  margin: 12px 0 14px;
+}
 a { color: #CEF0D4; text-decoration: underline; }
 
 
-a:hover { color: #a7e8f8; text-decoration: underline; } */
+a:hover { color: #a7e8f8; text-decoration: underline; }
 
 h1 { color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0px;  padding-top: 18px; padding-bottom: 18px;}
 
@@ -134,8 +142,6 @@ h2 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px
 
 .subheader { font-size: 26px; font-weight: 300; color: #ffcc66; margin: 0 0 24px; }
 
-
-p { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }
 
 a:hover { color: #3D3E3D }
 
@@ -150,8 +156,90 @@ a:hover { color: #3D3E3D }
   color: #7c795d;
   border: none;
 }
+
 form{    display: flex;
   flex-direction: column;
   text-align: left;
   width: 65%;
+}
+.container{
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-color: #E1A55D;
+}
+
+.container_table{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 89%;
+  height: 293px;
+  margin: 4% 5% 0% 7%;
+}
+.workshops{
+  width: 23%;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 87%;
+}
+.blue{
+  background-color: #5e718b;
+  height: 80%;
+}
+.p_workshop{
+  color: #082b34;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 21px;
+  line-height: 32px;
+  margin: 12px 0 14px;
+}
+.blue_sport{
+  height: 80%;
+  background-image: url("./images/sport.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+.blue_workshops{
+  height: 80%;
+  background-image: url("./images/workshop.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.blue_family{
+  height: 80%;
+  background-image: url("./images/family.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.blue_duble{
+  height: 80%;
+  background-image: url("./images/duble.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.blue_friends{
+  height: 80%;
+  background-image: url("./images/friends.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.blue_food{
+  height: 80%;
+  background-image: url("./images/food.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.blue_nature{
+  height: 80%;
+  background-image: url("./images/nature.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.blue_kids{
+  height: 80%;
+  background-image: url("./images/kids.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
