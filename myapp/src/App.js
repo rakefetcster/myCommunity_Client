@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import ShowCompanent from './Components/ShowComponent';
+
 const App=() =>{
   const [main,setMain] = useState(true);
   const [thisPage,setThisPage] = useState('');
@@ -30,7 +31,6 @@ const App=() =>{
   
    return (
     <div className="App">
-    
     {main?<ShowCompanent callback={getDataFromChild} isName={isName} main={main}/>:thisPage}
     </div>
   );

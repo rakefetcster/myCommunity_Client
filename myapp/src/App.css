@@ -127,7 +127,6 @@ p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 21px;
   line-height: 32px;
-  margin: 12px 0 14px;
 }
 a { color: #CEF0D4; text-decoration: underline; }
 
@@ -168,15 +167,17 @@ form{    display: flex;
   width: 100%;
   background-color: #E1A55D;
 }
-
+.table_hight{
+  height: 582px;
+}
 .container_table{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 89%;
-  height: 293px;
+  height: 320px;
   margin: 4% 5% 0% 7%;
-}
+  }
 .workshops{
   width: 23%;
   margin-left: 5px;
@@ -188,7 +189,7 @@ form{    display: flex;
   height: 80%;
 }
 .p_workshop{
-  color: #082b34;
+  color: #5e718b;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 21px;
   line-height: 32px;
@@ -242,4 +243,45 @@ form{    display: flex;
   background-image: url("./images/kids.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+.header{
+  border-top: 1px solid #E1A55D;
+  
+}
+.p_header{
+  color: #5e718b;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 21px;
+  line-height: 32px;
+  margin: 12px 0 14px;
+}
+.link{
+  color: #5e718b;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.bullelements{
+  font-size:1rem;
+}
+.link_p{
+  color: #5e718b;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+.header_with_logo{
+  display: flex;
+  flex-direction: row;
+}
+.myCommunityLogo_small{
+  background-image: url("./images/my_community_logo_new.jpg");
+  background-repeat: no-repeat;
+  background-size: 92%;
+  min-height: 12vh;
+  width: 95px;
+  margin-left: 33%;
 }
