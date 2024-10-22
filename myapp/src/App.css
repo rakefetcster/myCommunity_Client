@@ -285,3 +285,94 @@ form{    display: flex;
   width: 95px;
   margin-left: 33%;
 }
+.squre{
+  width: 100%;
+  height: 300px;
+  
+}
+.about{
+  width: 40%;
+  height: 500px;
+  background-color: #E1A55D;
+  margin-left: 406px 
+}
+.logo1{
+  background-image: url("./images/my_community_logo_new.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 265px;
+  min-height: 54vh ;
+  margin-left: 583px;
+  margin-top: 30px;
+
+}
+.borderForm{
+  border: 2px solid #E1A55D;
+  border-radius: 5px;
+  width: 70%;
+  height: 700px;
+}
+.contextForm{
+  margin: 10px 0 0 225px;
+}
+.allcontact{
+  display: flex;
+    width: 100%;
+    height: 165px;
+}
+.formBorder{
+  flex-flow: column wrap;
+
+}
+.myCommunityLogo3{
+  background-image: url("./images/my_community_logo_new.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 13vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 229px
+}
+
+.betweenForm{
+  padding:10px 0 0 0;
+}
+.p3 { 
+  color: #5e718b;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 19px;
+  line-height: 23px;
+}
+.h11{
+  font-size: 3rem;
+  color: #E1A55D;
+  font-family: 'Rouge Script', cursive;
+    margin: 0px;
+    padding-top: 18px;
+}
+.input{
+  border:none;
+  border-bottom: 1px solid #E1A55D;
+  width:100%;
+  margin: 5px 0 5px 0;
+}
+.select{
+  border: 1px solid #E1A55D;
+  width:100%;
+  margin: 5px 0 5px 0;
+
+}
+.textarea{
+  border: 1px solid #E1A55D;
+  width: 100%;
+  height: 200px;
+  margin: 5px 0 5px 0;
+
+}
+.find_activity{
+  margin: 31px 0 0 0;
+}

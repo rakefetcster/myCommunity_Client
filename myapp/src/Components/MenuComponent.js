@@ -2,6 +2,7 @@ import '../App.css';
 import LoginCompanent from './LogInCompanent';
 import AboutCompanent from './AboutComponent';
 import SingUpCompanent from './SingUpComponent';
+import BusinessFormComponent from './BusinessFormComponent';
 import {Link} from 'react-router-dom';
 
 const MenuComponent=(props) =>{
@@ -13,7 +14,7 @@ const MenuComponent=(props) =>{
   const mainData=(data)=>{
     props.callback(data);
    }
-  const pageArray = [<LoginCompanent callback={mainData}/>,<SingUpCompanent callback={mainData}/>,<AboutCompanent callback={mainData}/>];
+  const pageArray = [<LoginCompanent callback={mainData}/>,<SingUpCompanent callback={mainData}/>,<AboutCompanent callback={mainData}/>,<BusinessFormComponent />];
     
   const showPageFunc=(val) => {
       const thisArray = [];
@@ -23,7 +24,9 @@ const MenuComponent=(props) =>{
         props.callback({"goToPage":pageArray[1]});
       } else if(val==='about'){
         props.callback({"goToPage":pageArray[2]});
-      } 
+      } else if(val==='BusinessForm'){
+        props.callback({"goToPage":pageArray[3]});
+      }
       props.callback(thisArray);
     }
     
@@ -44,6 +47,7 @@ return(
         <p className="menuLink" > Hello {sessionStorage['nameLogin']}</p>
         <Link className="menuLink" to="/" onClick={() => logoutFunc()}>LogOut</Link>
         <Link className="menuLink" to="/about"  onClick={() => showPageFunc('about')}>About</Link>
+        <Link className="menuLink" to="/BusinessForm"  onClick={() => showPageFunc('BusinessForm')}>Business Form</Link>
         </div>
 }
   </div>
