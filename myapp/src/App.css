@@ -376,3 +376,8 @@ form{    display: flex;
 .find_activity{
   margin: 31px 0 0 0;
 }
+
+.formBox{
+  width: 50%;
+  margin-left: 362px;
+}
