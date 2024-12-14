@@ -1,9 +1,10 @@
 import './App.css';
 import { useState } from 'react';
 import ShowCompanent from './Components/ShowComponent';
+import HomeComponent from './Components/HomeComponent';
 
 const App=() =>{
-  const [main,setMain] = useState(true);
+  const [main,setMain] = useState(false);
   const [thisPage,setThisPage] = useState('');
   const [isName,setIsName] = useState(false);
 
@@ -16,7 +17,7 @@ const App=() =>{
         setThisPage('');
       }
       else if(chaildValue.hasOwnProperty("logout")){
-        setMain(true);
+        setMain(false);
         setIsName(true);
         setThisPage('');
       }
@@ -31,7 +32,8 @@ const App=() =>{
   
    return (
     <div className="App">
-    {main?<ShowCompanent callback={getDataFromChild} isName={isName} main={main}/>:thisPage}
+    
+    {main?<ShowCompanent callback={getDataFromChild} isName={isName} main={main}/>:<HomeComponent callback={getDataFromChild}/>}
     </div>
   );
 }
