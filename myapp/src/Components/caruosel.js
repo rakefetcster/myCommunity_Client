@@ -1,11 +1,8 @@
 import React from "react";
 import Slider from "react-slick"; // Import the Slider component from React Slick
 import OSMMap from "./osmmapComponent";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 const Carousel = ({ data }) => {
-  const navigate = useNavigate();
   const settings = {
     // Example Slider settings (adjust as needed)
     dots: true,
@@ -14,15 +11,9 @@ const Carousel = ({ data }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  const home = () => {
-    navigate("/");
-  };
+
   return (
     <div className="carousel-container">
-      <Link className="menuLink" to="/" onClick={home}>
-        Back Home
-      </Link>
-
       <Slider {...settings}>
         {data.map((item, index) => (
           <div key={index} className="bigContainer">

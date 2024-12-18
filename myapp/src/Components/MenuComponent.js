@@ -20,7 +20,7 @@ const MenuComponent = (props) => {
     <LoginCompanent callback={mainData} />,
     <SingUpCompanent callback={mainData} />,
     <AboutCompanent callback={mainData} />,
-    <BusinessFormComponent />,
+    <BusinessFormComponent callback={mainData} />,
     <LogedComponent callback={mainData} />,
   ];
 
@@ -93,8 +93,8 @@ const MenuComponent = (props) => {
             </Link>
             <Link
               className="menuLink"
-              to="/BusinessForm"
-              onClick={() => showPageFunc("BusinessForm")}
+              to="/"
+              // onClick={() => showPageFunc("BusinessForm")}
             >
               Business Form
             </Link>
